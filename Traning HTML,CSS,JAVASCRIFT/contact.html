@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <br>
+    <div id="wrapper">
+        <header class="myheader">
+            <h1 class="title">Company Name</h1>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="active">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <section id="container">
+            <form name="cont-frm">
+                <table cellpadding="6">
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" name="full_name" required placeholder="enter your name"></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail ID</td>
+                        <td><input type="email" name="email_id" required placeholder="enter your email"></td>  
+                    </tr>
+                    <tr>
+                        <td>Message</td>
+                        <td><input type="text" name="msg" required placeholder="enter the message"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" name="ok" value="send">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+        <footer class="myfooter">
+            <p>&copy;All rights reserved to Company Name</p>
+        </footer>
+    </div>
+</body>
+</html>

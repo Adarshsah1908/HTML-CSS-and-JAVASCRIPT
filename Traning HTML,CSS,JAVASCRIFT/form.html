@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form name="reg-frm">
+        <table cellpading="9">
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="full_name" required placeholder="enter your name"></td>
+            </tr>
+            <tr>
+                <td>E-mail ID</td>
+                <td><input type="email" name="email_id" required placeholder="enter your email"></td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td><input type="password" name="pass" required placeholder="enter your password"></td>
+            </tr>
+            <tr>
+                <td>Date of birth</td>
+                <td><input type="date of birth" name="dob" required placeholder="enter your date of birth"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="Gender" value="Male" checked>Male
+                    <input type="radio" name="Gender" value="female" checked>female
+                    <input type="radio" name="Gender" value="trans">trans gender
+                </td>
+            </tr>
+            <tr>
+                <td>language</td>
+                <td>
+                    <input type="checkbox" name="lang" value="c"checked>c
+                    <input type="checkbox" name="lang" value="c++" checked>c++
+                    <input type="checkbox" name="lang" value="HTML" checked>HTML
+                </td>
+            </tr>
+            <tr>
+                <td>Select file</td>
+                <td>
+                    <input type="file" name="ff" multiple>
+                </td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>
+                    <textarea name="address" cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><select name="city">
+                    <option value="kolkata">kolkata</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" name="ok" value="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

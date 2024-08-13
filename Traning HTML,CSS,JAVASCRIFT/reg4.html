@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration Form</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+ 
+    .form-group {
+      margin-bottom: 20px;
+    }
+    #image-preview {
+      max-width: 200px;
+      max-height: 200px;
+      margin-top: 20px;
+      display:none ;
+    }
+    .card-header h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header"><h2>User Registration</h2></div>
+          <div class="card-body">
+            <form method="POST" action="#">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="firstName">First Name:</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" name="firstName" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="lastName">Last Name:</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" name="lastName" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="password">Password:</label>
+                  <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                 <tr>
+                    <td>Gender:</td><br>
+                    <td class="form-control">
+                        <input type="radio">Male
+                        <input type="radio">Female
+                    </td>
+                 </tr>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="language">Language:</label><br>
+                  <td class="form-control">
+                    <input type="checkbox">  c
+                    <input type="checkbox">  c++
+                    <input type="checkbox">  js
+                </td>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="address1">Address Line 1:</label>
+                <input type="text" class="form-control" id="address1" placeholder="Enter Address Line 1" name="address1" required>
+              </div>
+              <div class="form-group">
+                <label for="address2">Address Line 2:</label>
+                <input type="text" class="form-control" id="address2" placeholder="Enter Address Line 2" name="address2">
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="city">City:</label>
+                  <select class="form-control" id="city" name="city" required>
+                    <option value="" disabled selected>Select City</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Rampurhat">Rampurhat</option>
+                    <option value="Delhi">Delhi</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="state">State:</label>
+                  <select class="form-control" id="State" name="State" required>
+                    <option value="" disabled selected>Select State</option>
+                    <option value="West Bengal">West Bengal</option>
+                    <option value="UP Bihar">UP Bihar</option>
+                    <option value="Goa">Goa</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="pin">PIN:</label>
+                  <input type="text" class="form-control" id="pin" placeholder="Enter PIN" name="pin" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="image">Select Image:</label>
+                <input type="file" class="form-control-file" id="image" accept="image/*">
+                <img id="image-preview" src="#" >
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+  
+    document.getElementById('image').addEventListener('change', function(e){
+      var imagePreview = document.getElementById('image-preview'); 
+      var file = e.target.files[0];
+      var reader = new FileReader();
+
+      reader.onload = function(e) {
+
+        imagePreview.src = e.target.result;
+        imagePreview.style.display = 'block';
+      }
+
+      reader.readAsDataURL(file);
+    });
+  </script>
+</body>
+</html>

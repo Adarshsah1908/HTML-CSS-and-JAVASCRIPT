@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=new Array(20,56,10,98,50);//array elements
+        document.write(arr[0] +" ");
+        document.write(arr[1] +" ");
+        document.write(arr[2] +" ");
+        document.write(arr[3] +" ");
+        document.write(arr[4] +" ");
+        document.write("<hr>")
+        for(var i=0;i<5;i++){
+            document.write(arr[i] +" ")
+        }
+        document.write("<hr>")
+        var max=arr[0];
+        for(var i=0;i<5;i++){
+            if(max<arr[i]){
+                max=arr[i]
+            }
+        }
+        document.write("max value is"+max);
+        document.write("<hr>")
+        var min=arr[0];
+        for(var i=0;i<5;i++){
+            if(min>arr[i]){
+                min=arr[i]
+            }
+        }
+        document.write("min value is"+min)
+        document.write("<hr>")
+        var arr1=new Array('Adarsh','Sidhant','Anish',67,97,53);
+        for(var i=0;i<6;i++){
+            document.write(arr1[i]+" ");
+        }
+    </script>
+</body>
+</html>

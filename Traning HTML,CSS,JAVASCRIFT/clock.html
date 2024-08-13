@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>clock</title>
+</head>
+<body>
+  <div class="container text-center">
+    <h1 id="msg"></h1>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  <script>
+    function myclock() {
+      let ct = new Date();
+      let hh = ct.getHours();
+      let mm = ct.getMinutes();
+      let ss = ct.getSeconds();
+      let am_pm;
+      if (hh >= 12) {
+        am_pm = "PM";
+        hh = hh - 12;
+      } else if (hh < 12) {
+        am_pm = "AM";
+      }
+      hh = chngTime(hh);
+      mm = chngTime(mm);
+      ss = chngTime(ss);
+      let ctime = hh + ":" + mm + ":" + ss + " " + am_pm;
+      document.getElementById('msg').innerHTML = ctime;
+      setInterval(myclock, 1000);
+    }
+
+    function chngTime(i) {
+      if (i >= 0 && i < 10) {
+        i = "0" + i;
+      }
+      return i;
+    }
+
+    myclock();
+  </script>
+</body>
+</html>

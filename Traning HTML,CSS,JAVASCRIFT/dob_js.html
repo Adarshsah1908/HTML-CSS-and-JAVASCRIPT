@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dob</title>
+    <script>
+        var cdate=new Date();
+        //document.write(cdate);
+        var cy=cdate.getFullYear();
+        function submitfrm(){
+        var day=document.getElementById('day').value;
+        var month=document.getElementById('month').value;
+        var year=document.getElementById('year').value;
+        //alert(day+month+year);
+        var dob=day+"-"+month+"-"+year
+        alert("Your date of birth is: "+dob)
+        //document.getElementById('msg').innerHTML="Your date of birth is: "+dob;
+        }
+    </script>
+</head>
+<body>
+    <form name="frm">
+        <table cellpadding="8">
+            <tbody>
+            <tr>
+                Enter Date of Birth:<a>
+                <select name="day" id="day">
+                    <option value="">-Day-</option>
+                    <script>
+                        for(var d=1;d<=31;d++){
+                            document.write("<option value="+d+">"+d);
+                        }
+                    </script>
+                </select><a>
+                    <select name="month" id="month">
+                        <option value="">-Month-</option>
+                        <script>
+                            for(var m=1;m<=12;m++){
+                                document.write("<option value="+m+">"+m);
+                            }
+                        </script>
+                    </select><a>
+                        <select name="year" id="year">
+                            <option value="">-Year-</option>
+                            <script>
+                                for(var y=1990;y<=2023;y++){
+                                    document.write("<option value="+y+">"+y);
+                                }
+                            </script>
+                        </select><a>  
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="button" onclick="submitfrm()">Submit</button> 
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <label for="msg" id="msg"></label>
+    <p id="msg"></p>
+    <script>
+        var cdate=new Date();
+        //document.write(cdate);
+        var cy=cdate.write(cy)
+    </script>
+</body>
+</html>

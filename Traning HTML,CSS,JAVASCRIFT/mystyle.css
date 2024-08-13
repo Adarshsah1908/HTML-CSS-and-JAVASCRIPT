@@ -1,0 +1,39 @@
+.content{
+    width: 350px;
+    height: 350px;
+    border: 1px solid #000;
+    float: left;
+}
+.dv-margin-right{
+    margin-right: 22px;
+}
+.bg-red{
+    background-color: #ffeaea;
+}
+.bg-yellow{
+    background-color: #ffffd4;
+}
+.bg-green{
+    background-color: #e4ffba;
+}
+.myfooter{
+    width: 100%;
+    height: 45px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+.myfooter p{
+    margin: 0;
+    padding: 12px 0 0 0;
+}
+.txt{
+    width: 350px;
+    height: auto;
+    padding: 7px;
+}
+.tarea{
+    width: 350px;
+    height: 150px;
+    padding: 7px;
+}
